@@ -1,0 +1,40 @@
+.fundo {
+    background-color: #121212;
+    color: white;
+}
+
+.bg-nav {
+    background-color: #191919;
+    color: white;
+}
+
+.bg-hr {
+    background-color: gray;
+}
+
+{% comment %} /* Adicionando estilos para campos de formulário */
+form label {
+    color: white;
+    position: relative;
+    top: 40px; left: 40px;
+    margin: 0;
+    padding: 2px 0 0 12px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+}
+
+form input,
+form select,
+form textarea {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+    position: relative;
+    top: 40px; left: 40px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #bbb;
+} {% endcomment %}

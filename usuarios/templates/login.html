@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+
+
+{% block 'body' %}
+
+    <div class='container'>
+        <form action="{% url "login" %}" method="POST"> {% csrf_token %}
+            {% if messages %}
+                {% for message in messages %}
+                    <section class="alert {{message.tags}}">
+                        {{message}}
+                    </section>
+                {% endfor %}
+            {% endif %}
+
+            
+            <br>
+            <label>Nome</label>
+            <input type="text" placeholder="Digite seu Nome..." name="username" id="" class="form-control">
+            <br>
+            <br>
+            <label>Senha</label>
+            <input type="password" placeholder="Digite seu Senha..." name="senha" class="form-control">
+            <br>
+            <input type="submit" class="btn btn-success">
+            
+            
+        </form>
+    </div>
+
+
+{% endblock %}

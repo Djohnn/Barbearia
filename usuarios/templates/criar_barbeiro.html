@@ -1,0 +1,16 @@
+
+
+
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome"><br><br>
+    <label for="bio">Bio:</label>
+    <textarea id="bio" name="bio"></textarea><br><br>
+    <label for="especializacao">Especialização:</label>
+    <input type="text" id="especializacao" name="especializacao"><br><br>
+    <label for="foto">Foto:</label>
+    <input type="file" id="foto" name="foto"><br><br>
+    <button type="submit">Criar Barbeiro</button>
+</form>

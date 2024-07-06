@@ -1,0 +1,27 @@
+{% extends 'cliente_base.html' %}
+{% load static %}
+
+
+{% block 'head' %}
+    
+{% endblock  %}
+
+
+{% block 'body' %}
+<div class="container">
+  <div class="row justify-content-center">  <div class="col-md-8">    
+          
+    <h1>Minha Agenda</h1>
+    <ul>
+      {% for agendamento in agendamentos %}
+        <li>{{ agendamento.servico }} - {{ agendamento.data }} às {{ agendamento.hora }}</li>
+      {% empty %}
+        <li>Nenhum agendamento encontrado.</li>
+      {% endfor %}
+    </ul>
+    <a href="{% url "criar_agendamento" %}">Novo Agendamento</a>
+ 
+  </div>
+</div> 
+
+{% endblock  %}
